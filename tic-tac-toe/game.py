@@ -17,4 +17,4 @@ class TicTacToe:
         return [i for i, spot in enumerate(self.board) if spot == ' ']
       
             
-    
+# https://www.youtube.com/watch?v=8ext9G7xspg&t=2153s 45:46
