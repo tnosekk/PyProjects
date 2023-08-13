@@ -5,6 +5,6 @@ class Horse:
         self.colour = colour
 
 
-h1 = Horse("Batory", 0.10, "Chestnut")
+h1 = Horse("Batory", 30, "Chestnut")
 
 print(f"{h1.name}, {h1.speed}, {h1.colour}")
