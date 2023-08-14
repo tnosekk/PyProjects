@@ -4,7 +4,8 @@ class Horse:
         self.speed = speed
         self.colour = colour
 
+    def print_hores(self):
+        pass
+
 
 h1 = Horse("Batory", 30, "Chestnut")
-
-print(f"{h1.name}, {h1.speed}, {h1.colour}")
