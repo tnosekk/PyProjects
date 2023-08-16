@@ -1,9 +1,9 @@
 class Player:
-    def __init__(self, fname, budget):
+    def __init__(self, fname, balance):
         self.fname = fname
-        self.budget = budget
+        self.balance = balance
 
-    def update_budget(self):
+    def update_balance(self):
         pass
 
     def bet(self, horse_name, amount):
