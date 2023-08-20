@@ -1,11 +1,11 @@
-from flask import Blueprint
+from flask import Blueprint, render_template, request
 
 auth = Blueprint("auth", __name__)
 
 
-@auth.route("/login")
+@auth.route("/login", methods=["GET", "POST"])
 def login():
-    return "<p>Login<p>"
+    return render_template("login.html", text="Testing templating", boolean=True)
 
 
 @auth.route("/logout")
@@ -13,6 +13,24 @@ def logout():
     return "<p>Logout<p>"
 
 
-@auth.route("/sing-up")
+@auth.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
-    return "<p>Sign Up<p>"
+    if request.method == "POST":
+        email = request.form.get("email")
+        first_name = request.form.get("firstName")
+        password1 = request.form.get("password1")
+        password2 = request.form.get("password2")
+
+        if len(email) < 4:
+            pass
+        elif len(first_name) < 2:
+            pass
+        elif password1 != password2:
+            pass
+        elif len(password1) < 7:
+            pass
+        else:
+            # add user to database
+            pass
+
+    return render_template("sign_up.html")
